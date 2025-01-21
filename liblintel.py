@@ -61,11 +61,10 @@ def _test():
     _debug(str(lintel))
 
     lintel = Lintel()
-    lintel.fromIDS("⿱僃心")
+    lintel.fromIDS("⿱⿰号官心")
     _debug(lintel.idc)
     _debug(lintel.chars)
     _debug(str(lintel))
 
 
-if __name__ == "__main__":
-    _test()
+# if __name__ == "__main__": _test()
