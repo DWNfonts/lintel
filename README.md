@@ -1,4 +1,5 @@
 # Lintel
+[&amp;#20013;&amp;#25991;](./README.zh.md)
 
 Lintel is a software, containing the library and the scripts for reading IDS. Notice that Lintel only supports [BabelStone](https://babelstone.co.uk/CJK/IDS.HTML) flavored IDS, not [Yi Bai's](https://github.com/yi-bai/ids) ~~because I think I'm *tired* about making any scripts for now~~.
 
