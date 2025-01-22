@@ -19,12 +19,11 @@ def _locateMagicList(char):
 class Lintel:
 
     def __init__(
-        self, idc: None | str, chars: tuple, notProcessed="", sources=[]
+        self, idc: None | str, chars: tuple, notProcessed=""
     ) -> None:  # force-creating, danger as fuck
         self.idc = idc
         self.chars = chars
         self.notProcessed = notProcessed
-        self.sources = sources
 
     def __repr__(self) -> str:
         if isinstance(self.idc, str):
@@ -46,6 +45,10 @@ class Lintel:
         else:
             return "".join([str(x) for x in self.chars]) + self.notProcessed
 
+class LintelWithSource:
+    def __init__(self, ids: Lintel, source: None | str) -> None:
+        self.ids = ids
+        self.source = source
 
 def importIDS(ids) -> Lintel | str:
     if len(ids) == 0:
