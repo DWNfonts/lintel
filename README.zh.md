@@ -1,20 +1,23 @@
 # Lintel
-[English](./README.md)
+[英文](./README.md)
 
-Lintel¬O¤@­Ó³nÅé¡A¥]§tÅª¨úIDSªº¨ç¦¡®w©M¸}¥»¡C½Ðª`·NLintel ¶È¤ä´©[BabelStone](https://babelstone.co.uk/CJK/IDS.HTML) ­·®æªºIDS¡A¦Ó¤£¤ä´©[Yi Bai](https://github.com/yi-bai/ids) ~~¦]¬°§ÚÄ±±o§Ú²{¦b¤w¸g¹½­Â¤F»s§@¥ô¦ó¸}¥»~~¡C
+Lintel是个软件，包含一个库还有一些脚本，专门用来读IDS的。注意到Lintel只支持[巴别版](https://babelstone.co.uk/CJK/IDS.HTML)IDS格式，不支持[字统](https://github.com/yi-bai/ids)格式。~~我天天做字统格式*做累了*，换换口味。~~
 
-¸Ó repo »P BabelStone IDS ¸ê®Æ®w¤@°_¤Àµo¡A¦ì©ó¡§data/IDS.TXT¡¨¡A§Ú·|«O«ù¨ä§ó·s¡C
+这仓库带着巴别版IDS发行的，就在`data/IDS.TXT`，尽量更到最新。
 
-[Lintel ±Ä¥Î 3-Clause BSD ±ÂÅv¡C](./LICENSE.md)
+[Lintel用的3句BSD授的权。](./LICENSE.md)
 
-## Lintel ¬O¤°»ò·N«ä¡H
+## Lintel是啥
 
-¶â¡A·°ªO¦b¤¤¤å¸Ì¬O¡u·°¡vªº·N«ä¡A³o¬O§ÚÀH¾÷¬d¥X¨Óªº¡C
+Lintel对应汉字“楣”是我随便翻出来的。
 
-Lintel ¤]¬OÃø¥HÅª¨úªº¡uªí·N´y­z§Ç¦C¡v©Î IDS ªº´À¥N«~¡]¥¦´N¹³¤@­Ó±`¼Æ¡I¡^
+Lintel也可以替代Ideographic Description Sequence用，毕竟英文全称太长了，简称也全是大写像个常量。
 
-[Âà¨ì¤å¥ó¡I](./docs/README.md)
+[带我去文档！](./docs/README.md)
 
-Ápµ¸§Ú
- - [@dwn@dwnfonts.cc](https://dwnfonts.cc/@dwn)
- - [Discord](https://discord.gg/bq5xXTytG8)
+## 联系我
+  - [@dwn@dwnfonts.cc](https://dwnfonts.cc/@dwn)
+  - [Discord](https://discord.gg/bq5xXTytG8)
+
+## `/dev/null`的一番话
+​地球的火种抛向深空，文明的烈焰焚遍星​海​。
