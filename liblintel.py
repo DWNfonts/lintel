@@ -19,20 +19,23 @@ def _locateMagicList(char):
 class Lintel:
 
     def __init__(
-        self, idc, chars, notProcessed=""
+        self, idc: None | str, chars: tuple, notProcessed=""
     ) -> None:  # force-creating, danger as fuck
         self.idc = idc
         self.chars = chars
         self.notProcessed = notProcessed
 
-    def fromIDS(self, ids) -> None:
-        pass
-
     def __repr__(self) -> str:
-        return f"Lintel<{ self.idc + "".join([str(x) for x in self.chars]) }>"
+        if self.idc is str:
+            return f"Lintel<{ self.idc + "".join([str(x) for x in self.chars]) }+{ self.notProcessed }>"
+        else:
+            return f"Lintel<{ ''.join([str(x) for x in self.chars]) }+{ self.notProcessed }>"
 
     def __str__(self) -> str:
-        return self.idc + "".join([str(x) for x in self.chars])
+        if self.idc is str:
+            return self.idc + "".join([str(x) for x in self.chars]) + self.notProcessed
+        else:
+            return "".join([str(x) for x in self.chars]) + self.notProcessed
 
 
 def importIDS(ids) -> Lintel:
@@ -40,7 +43,7 @@ def importIDS(ids) -> Lintel:
     loop = _locateMagicList(firstChar)
     match loop:
         case 0:
-            idc = ""
+            idc = None
             # todo: {#}
             chars = tuple(firstChar)
             notProcessed = ids[1:]
@@ -70,4 +73,4 @@ def _test():
     _debug(lintel.chars)
 
 
-if __name__ == "__main__": _test()
+# if __name__ == "__main__": _test()

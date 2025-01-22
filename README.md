@@ -13,3 +13,7 @@ Well lintel means "楣" in Chinese, which I randomly looked up.
 Lintel is also a replacement of the hard-read as fuck "Ideographic Description Sequence", or IDS (it's fucking like a constant!)
 
 [Go to the docs!](./docs/README.md)
+
+## Contact me
+  - [@dwn@dwnfonts.cc](https://dwnfonts.cc/@dwn)
+  - [Discord](https://discord.gg/bq5xXTytG8)
