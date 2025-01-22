@@ -15,6 +15,10 @@ Lintel也可以替代Ideographic Description Sequence用，毕竟英文全称太
 
 [带我去文档！](./docs/README.md)
 
+## Todo
+  - `liblintel`：添加`{#}`支持
+  - 开搞脚本
+
 ## 联系我
   - [@dwn@dwnfonts.cc](https://dwnfonts.cc/@dwn)
   - [Discord](https://discord.gg/bq5xXTytG8)

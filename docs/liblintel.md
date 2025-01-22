@@ -7,6 +7,8 @@ My ability to write the document is close to shit. If you cannot read, following
 
 As I said, Lintel is also a replacement of the "Ideographic Description Sequence", or IDS.
 
+By the way, this library *WON'T* detect if you're storing IDS or not, maybe you're using it to post through nostr. I don't care.
+
 ## Directly new a Lintel object
 
 ```python
@@ -33,3 +35,15 @@ When you're giving more than 2 IDC/chars, only the *first* char will be processe
 lintel = liblintel.importIDS("⿰纟工迪") # Do you know? 红迪 means Reddit in Chinese. However, Reddit sucks.
 # returns Lintel<⿰纟工+迪>.
 ```
+
+## `LintelWithSource`, shortly LWS: `LWS^<IDS>$(<SRC>)`
+
+```python
+def __init__(self, ids: Lintel | str, source: list) -> None: # ...
+```
+
+Apparently Lintel with source, as Andrew West said "𝖉𝖊𝖘𝖎𝖌𝖓𝖆𝖙𝖎𝖔𝖓𝖘".
+
+## `importIDSWithSource` converts `^<IDS>$(<SRC>)` the string to `LWS^<IDS>$(<SRC>)` the LWS
+
+Holy. I've just spoke the fact?
