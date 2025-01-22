@@ -45,10 +45,15 @@ class Lintel:
         else:
             return "".join([str(x) for x in self.chars]) + self.notProcessed
 
+
 class LintelWithSource:
-    def __init__(self, ids: Lintel, source: None | str) -> None:
+    def __init__(self, ids: Lintel | str, source: list) -> None:
         self.ids = ids
         self.source = source
+
+    def __repr__(self) -> str:
+        return f"LWS^{self.ids}$({"".join(self.source)})"
+
 
 def importIDS(ids) -> Lintel | str:
     if len(ids) == 0:
@@ -81,6 +86,18 @@ def importIDS(ids) -> Lintel | str:
             return Lintel(idc, chars, notProcessed=remainChars)
 
 
+def importIDSWithSource(idswsrc):
+    import re
+
+    MAGIC_RE = "^\\^[^ ]*\\$([^ ]*)"
+    if not re.match(MAGIC_RE, idswsrc):
+        raise Exception("Invalid IDS")
+    else:
+        idc, source = idswsrc.split("$")
+        idc, source = idc[1:], source[1:-1]
+        return LintelWithSource(importIDS(idc), source)
+
+
 def _test():
 
     def _debug(text, lf=False):
@@ -89,10 +106,8 @@ def _test():
         end = "" if lf else "\n"
         print(text, file=sys.stderr, end=end)
 
-    lintel = importIDS("⿺辶⿳穴⿲月⿱⿲幺言幺⿲长马长刂心")
-    _debug([lintel])
-    _debug(lintel.chars)
-    _debug(lintel.notProcessed)
+    lws = importIDSWithSource("^⿰衤⿱𥫗灭$(GT)")
+    print([lws])
 
 
 # if __name__ == "__main__": _test()
