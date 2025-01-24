@@ -6,8 +6,14 @@
 import liblintel, io
 
 
-def txt2lintelGroup(txt: str | io.TextIOWrapper):
-    import sys
+def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: dict = {}):
+    import sys, re
+
+    def _lookup(value):
+        try:
+            return lookup[value]
+        except:
+            return ""
 
     result = {}
     for line in txt:
@@ -16,7 +22,14 @@ def txt2lintelGroup(txt: str | io.TextIOWrapper):
             continue
         else:
             try:
-                line = line.strip().split("\t")
+                lineText = line.strip()
+                unencoded = re.findall("\\{(.*?)\\}", lineText)
+                if len(unencoded) > 0:
+                    for i in [int(x) - 1 for x in unencoded]:
+                        data = _lookup(i)
+                        lineText = lineText.replace(f"{{{i}}}", data)
+                        pass
+                line = lineText.split("\t")
                 zi = line[1]
                 ids = line[2:]
                 for i in range(len(ids)):
@@ -33,11 +46,7 @@ def txt2lintelGroup(txt: str | io.TextIOWrapper):
                 print(
                     f"\033[43mInvaild data: `{line}', skip\033[0m",
                     file=sys.stderr,
-                    end="",
                 )
-
-    if txt is io.TextIOWrapper:
-        txt.close()
     return result
 
 
