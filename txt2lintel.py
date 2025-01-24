@@ -18,7 +18,7 @@ def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: dict = {}):
     result = {}
     for line in txt:
         if line.startswith("#"):
-            print(f"\033[43mComment line: `{line.rstrip()}'\033[0m", file=sys.stderr)
+            print(f"Comment line: `{line.rstrip()}'", file=sys.stderr)
             continue
         else:
             try:
@@ -35,7 +35,7 @@ def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: dict = {}):
                 for i in range(len(ids)):
                     if ids[i].startswith("*"):  # Inline comment
                         print(
-                            f"\033[43mInline comment: `{"\t".join(ids[i:])}'\033[0m",
+                            f"Inline comment: `{"\t".join(ids[i:])}'",
                             file=sys.stderr,
                         )
                         ids = ids[1:i]
@@ -44,7 +44,7 @@ def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: dict = {}):
                 result[zi] = lintelList
             except:
                 print(
-                    f"\033[43mInvaild data: `{line}', skip\033[0m",
+                    f"Invaild data: `{line}', skip",
                     file=sys.stderr,
                 )
     return result
