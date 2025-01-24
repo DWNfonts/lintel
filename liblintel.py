@@ -82,7 +82,6 @@ def importIDS(ids) -> Lintel | str:
                         remainCharList.append(lintel)
                     remainChars = remainChars[1:]
             chars = tuple(remainCharList)
-            print(Lintel(idc, chars, notProcessed=remainChars))
             return Lintel(idc, chars, notProcessed=remainChars)
 
 
