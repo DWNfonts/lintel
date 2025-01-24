@@ -17,7 +17,8 @@ Lintel is also a replacement of the hard-read as fuck "Ideographic Description S
 
 ## Todo
   - `liblintel`: Add `{#}` support
-  - Make some scripts
+    - Workaround in `txt2lintel`
+  - ~~Make some scripts~~
 
 ## Contact me
   - [@dwn@dwnfonts.cc](https://dwnfonts.cc/@dwn)

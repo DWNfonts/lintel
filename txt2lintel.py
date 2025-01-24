@@ -6,14 +6,14 @@
 import liblintel, io
 
 
-def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: dict = {}):
+def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: list | str = []):
     import sys, re
 
     def _lookup(value):
         try:
             return lookup[value]
         except:
-            return ""
+            return "？"
 
     result = {}
     for line in txt:
