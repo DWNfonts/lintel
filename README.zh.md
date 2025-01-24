@@ -17,7 +17,8 @@ Lintel也可以替代Ideographic Description Sequence用，毕竟英文全称太
 
 ## Todo
   - `liblintel`：添加`{#}`支持
-  - 开搞脚本
+    - `txt2lintel`里头做了点
+  - ~~开搞脚本~~
 
 ## 联系我
   - [@dwn@dwnfonts.cc](https://dwnfonts.cc/@dwn)
