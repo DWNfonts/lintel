@@ -7,7 +7,7 @@
 def _locateMagicList(char):
     __MAGIC_LIST = [  # everytime I name the list/dict as magic
         "⿾⿿〾",  # IDCs followed by 1 char/IDS
-        "⿰⿱⿴⿵⿶⿷⿸⿹⿺⿼⿽㇯",  # IDCs followed by 2 chars/IDSs
+        "⿰⿱⿴⿵⿶⿷⿸⿹⿺⿼⿽㇯⿻",  # IDCs followed by 2 chars/IDSs
         "⿲⿳",  # IDCs followed by 3 chars/IDSs
     ]
     for i in range(len(__MAGIC_LIST)):
