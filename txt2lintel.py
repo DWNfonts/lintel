@@ -9,7 +9,7 @@ import liblintel, io
 def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: list | str = []):
     import sys, re
 
-    def _lookup(value):
+    def _lookup(value: int):
         try:
             return lookup[value]
         except:
@@ -27,8 +27,8 @@ def txt2lintelGroup(txt: str | io.TextIOWrapper, lookup: list | str = []):
                 if len(unencoded) > 0:
                     for i in [int(x) - 1 for x in unencoded]:
                         data = _lookup(i)
-                        lineText = lineText.replace(f"{{{i}}}", data)
-                        pass
+                        index = "{%d}" % i
+                        lineText = lineText.replace(f"{{{i+1}}}", data)
                 line = lineText.split("\t")
                 zi = line[1]
                 ids = line[2:]
